@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Delete Kubernetes resources from the script's directory
 echo "Deleting Kubernetes resources..."
-kubectl delete -f "$SCRIPT_DIR/k8s/"
+kubectl delete -f "$SCRIPT_DIR"
 
 # Remove entries from /etc/hosts
 echo "Removing entries from /etc/hosts (requires sudo)..."

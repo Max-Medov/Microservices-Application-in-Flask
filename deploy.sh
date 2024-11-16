@@ -15,7 +15,7 @@ minikube addons enable ingress
 
 # Apply Kubernetes manifests from the script's directory
 echo "Applying Kubernetes manifests..."
-kubectl apply -f "$SCRIPT_DIR/k8s/"
+kubectl apply -f "$SCRIPT_DIR"
 
 # Get Minikube IP
 MINIKUBE_IP=$(minikube ip)
