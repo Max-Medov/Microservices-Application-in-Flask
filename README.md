@@ -1,19 +1,19 @@
-**The system divided into three microservices, each responsible for a specific domain of functionality:**
+****The system divided into three microservices, each responsible for a specific domain of functionality:****
 
 
-1. User Service: Manages user-related operations, including registration, authentication, and profile updates.
+**User Service:** Manages user-related operations, including registration, authentication, and profile updates.
 Endpoints:
 /register: Register a new user.
 /login: Authenticate a user.
 /profile: Retrieve or update user profile.
 
-2. Product Service: Handles all product-related operations, such as managing product inventory and viewing details.
+**Product Service:** Handles all product-related operations, such as managing product inventory and viewing details.
 Endpoints:
 /add: Add a new product.
 /delete: Remove a product.
 /view: View product details.
 
-3. Order Service: Oversees the order lifecycle, from creation to payment processing and tracking order status.
+**Order Service:** Oversees the order lifecycle, from creation to payment processing and tracking order status.
 Endpoints:
 /create_order: Create a new order.
 /process_payment: Process payment for an order.
@@ -21,7 +21,7 @@ Endpoints:
 
 ----------------------------------------------
 
-**Kubernetes Deployment (Manual)**
+****Kubernetes Deployment (Manual)****
 
 Git clone https://github.com/Max-Medov/Microservices-Application-in-Flask.git
 
@@ -55,7 +55,7 @@ kubectl get pods -n ingress-nginx
 
 ---------------------------------------------------------------------
 
-**Kubernetes Deployment (Script)**
+****Kubernetes Deployment (Script)****
 
 Git clone https://github.com/Max-Medov/Microservices-Application-in-Flask.git
 
@@ -75,11 +75,11 @@ chmod+x clenup.sh
 
 ----------------------------------------------------------------------
 
-**Testing the Microservices**
+****Testing the Microservices****
 
-1. User Service
+**User Service**
 
-Register a User:
+**Register a User:**
 
 curl -X POST -H "Content-Type: application/json" -d '{"username":"testuser","password":"testpass"}' http://user.local/register
 
@@ -87,14 +87,14 @@ curl -X POST -H "Content-Type: application/json" -d '{"username":"testuser","pas
 
 
 
-Login a User:
+**Login a User:**
 
 curl -X POST -H "Content-Type: application/json" -d '{"username":"testuser","password":"testpass"}' http://user.local/login
 
 
 
 
-View a User:
+**View a User:**
 
 curl http://user.local/profile
 
@@ -102,22 +102,22 @@ curl http://user.local/profile
 
 
 
-2. Product Service 
+**Product Service**
 
-Add a Product:
+**Add a Product:**
 
 curl -X POST -H "Content-Type: application/json" -d '{"name": "Product A", "price": 29.99}' http://product.local/add
 
 
 
 
-View a Product:
+**View a Product:**
 
 curl http://product.local/view/1
 
 
 
-Delete a Product:
+**Delete a Product:**
 
 curl -X DELETE http://product.local/delete/1
 
@@ -125,7 +125,7 @@ curl -X DELETE http://product.local/delete/1
 
 
 
-3. Order Service 
+**Order Service**
 
 Add a Products:
 curl -X POST -H "Content-Type: application/json" -d '{"name": "Product A", "price": 36}' http://product.local/add
@@ -134,7 +134,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "Product B", "pric
 
 
 
-Create an order:
+**Create an order:**
 
 curl -X POST -H "Content-Type: application/json" -d '{
   "products": [
@@ -146,15 +146,15 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
 
 
-Process Payment:
+**Process Payment:**
 
-curl -X POST -H "Content-Type: application/json" -d '{"order_id": "095a56ba-30ae-49b4-aad2-b72da69ebf5f", "payment_method": "credit_card"}' http://order.local/process_payment
+curl -X POST -H "Content-Type: application/json" -d '{"order_id": "<order-id>", "payment_method": "credit_card"}' http://order.local/process_payment
 
 
 
-Track an order:
+**Track an order:**
 
-curl http://order.local/track_order/095a56ba-30ae-49b4-aad2-b72da69ebf5f
+curl http://order.local/track_order/<order-id>
 
 
 
