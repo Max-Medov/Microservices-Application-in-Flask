@@ -2,7 +2,7 @@
 
 # Delete Kubernetes resources
 echo "Deleting Kubernetes resources..."
-kubectl delete -f /k8s/Microservices-Application-in-Flask
+kubectl delete -f /Microservices-Application-in-Flask
 
 # Remove entries from /etc/hosts
 echo "Removing entries from /etc/hosts (requires sudo)..."

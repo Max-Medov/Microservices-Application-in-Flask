@@ -12,7 +12,7 @@ minikube addons enable ingress
 
 # Apply Kubernetes manifests
 echo "Applying Kubernetes manifests..."
-kubectl apply -f /k8s/Microservices-Application-in-Flask
+kubectl apply -f /Microservices-Application-in-Flask
 
 # Get Minikube IP
 MINIKUBE_IP=$(minikube ip)
