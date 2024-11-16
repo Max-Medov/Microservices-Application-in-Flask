@@ -57,3 +57,10 @@ Kubernetes Deployment (Script)
 chmod+x deploy.sh
 ./deploy.sh
 
+Kubernetes Cleanup (Script)
+cd Microservices-Application-in-Flask/
+
+chmod+x clenup.sh
+./clenup.sh
+
+
