@@ -111,7 +111,5 @@ curl http://order.local/track_order/095a56ba-30ae-49b4-aad2-b72da69ebf5f
 
 
 
-![Uploading image.png…]()
-
 
 
