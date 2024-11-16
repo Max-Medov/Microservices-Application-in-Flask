@@ -1,4 +1,4 @@
-**The system will be divided into three microservices, each responsible for a specific domain of functionality:**
+**The system divided into three microservices, each responsible for a specific domain of functionality:**
 
 
 1. User Service: Manages user-related operations, including registration, authentication, and profile updates.
