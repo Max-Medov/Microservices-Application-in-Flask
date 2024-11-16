@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Get the directory where the script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Start Minikube if not running
 if ! minikube status &>/dev/null; then
   echo "Starting Minikube..."
@@ -10,9 +13,9 @@ fi
 echo "Enabling Ingress addon..."
 minikube addons enable ingress
 
-# Apply Kubernetes manifests
+# Apply Kubernetes manifests from the script's directory
 echo "Applying Kubernetes manifests..."
-kubectl apply -f /Microservices-Application-in-Flask
+kubectl apply -f "$SCRIPT_DIR/k8s/"
 
 # Get Minikube IP
 MINIKUBE_IP=$(minikube ip)
