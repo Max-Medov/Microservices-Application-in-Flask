@@ -28,22 +28,31 @@ Git clone https://github.com/Max-Medov/Microservices-Application-in-Flask.git
 Minikube start
 
 kubectl apply -f k8s/postgres-deployment.yaml
+
 kubectl apply -f k8s/user-deployment.yaml
+
 kubectl apply -f k8s/product-deployment.yaml
+
 kubectl apply -f k8s/order-deployment.yaml
+
 kubectl apply -f k8s/ingress.yaml
 
 minikube status
 
 kubectl get pods
+
 kubectl get services
+
 kubectl get ingress
 
 minikube ip
 
 *Edit /etc/hosts and add the following:
+
 <minikube-ip> user.local
+
 <minikube-ip> product.local
+
 <minikube-ip> order.local
 
 Check if Ingress is enabled:
