@@ -48,7 +48,7 @@ minikube addons list
 If not enabled, enable it:
 minikube addons enable ingress
 
-# kubectl get pods -n ingress-nginx
+*kubectl get pods -n ingress-nginx
 
 ---------------------------------------------------------------------
 
