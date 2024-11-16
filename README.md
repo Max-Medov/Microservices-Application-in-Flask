@@ -1,5 +1,5 @@
-**The system will be divided into three microservices, each responsible for a specific domain of functionality:
-**
+**The system will be divided into three microservices, each responsible for a specific domain of functionality:**
+
 
 1. User Service: Manages user-related operations, including registration, authentication, and profile updates.
 Endpoints:
@@ -73,6 +73,7 @@ chmod+x clenup.sh
 ./clenup.sh
 
 
+----------------------------------------------------------------------
 
 **Testing the Microservices**
 
@@ -146,11 +147,13 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
 
 Process Payment:
+
 curl -X POST -H "Content-Type: application/json" -d '{"order_id": "095a56ba-30ae-49b4-aad2-b72da69ebf5f", "payment_method": "credit_card"}' http://order.local/process_payment
 
 
 
 Track an order:
+
 curl http://order.local/track_order/095a56ba-30ae-49b4-aad2-b72da69ebf5f
 
 
