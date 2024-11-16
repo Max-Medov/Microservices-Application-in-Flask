@@ -1,4 +1,4 @@
-The system will be divided into three microservices, each responsible for a specific domain of functionality:
+**The system will be divided into three microservices, each responsible for a specific domain of functionality:**
 
 1. User Service: Manages user-related operations, including registration, authentication, and profile updates.
 Endpoints:
@@ -23,12 +23,15 @@ Endpoints:
 
 Kubernetes Deployment (Script)
 Git clone https://github.com/Max-Medov/Microservices-Application-in-Flask.git
+
 cd Microservices-Application-in-Flask/
 
 chmod+x deploy.sh
+
 ./deploy.sh
 
 Kubernetes Cleanup (Script)
+
 cd Microservices-Application-in-Flask/
 
 chmod+x clenup.sh
@@ -36,7 +39,7 @@ chmod+x clenup.sh
 
 
 
-Testing the Microservices
+**Testing the Microservices**
 
 1. User Service
 
