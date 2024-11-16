@@ -1,4 +1,5 @@
-The system will be divided into three microservices, each responsible for a specific domain of functionality:
+**The system will be divided into three microservices, each responsible for a specific domain of functionality:
+**
 
 1. User Service: Manages user-related operations, including registration, authentication, and profile updates.
 Endpoints:
@@ -20,10 +21,9 @@ Endpoints:
 
 ----------------------------------------------
 
-Kubernetes Deployment (Manual)
+**Kubernetes Deployment (Manual)**
 
 Git clone https://github.com/Max-Medov/Microservices-Application-in-Flask.git
-cd Microservices-Application-in-Flask/
 
 Minikube start
 
@@ -55,11 +55,10 @@ kubectl get pods -n ingress-nginx
 
 ---------------------------------------------------------------------
 
-Kubernetes Deployment (Script)
+**Kubernetes Deployment (Script)**
 
 Git clone https://github.com/Max-Medov/Microservices-Application-in-Flask.git
 
-cd Microservices-Application-in-Flask/
 
 chmod+x deploy.sh
 
@@ -67,7 +66,7 @@ chmod+x deploy.sh
 
 Kubernetes Cleanup (Script)
 
-cd Microservices-Application-in-Flask/
+--
 
 chmod+x clenup.sh
 
@@ -75,11 +74,12 @@ chmod+x clenup.sh
 
 
 
-Testing the Microservices
+**Testing the Microservices**
 
 1. User Service
 
 Register a User:
+
 curl -X POST -H "Content-Type: application/json" -d '{"username":"testuser","password":"testpass"}' http://user.local/register
 
 
@@ -87,12 +87,14 @@ curl -X POST -H "Content-Type: application/json" -d '{"username":"testuser","pas
 
 
 Login a User:
+
 curl -X POST -H "Content-Type: application/json" -d '{"username":"testuser","password":"testpass"}' http://user.local/login
 
 
 
 
 View a User:
+
 curl http://user.local/profile
 
 
@@ -102,17 +104,20 @@ curl http://user.local/profile
 2. Product Service 
 
 Add a Product:
+
 curl -X POST -H "Content-Type: application/json" -d '{"name": "Product A", "price": 29.99}' http://product.local/add
 
 
 
 
 View a Product:
+
 curl http://product.local/view/1
 
 
 
 Delete a Product:
+
 curl -X DELETE http://product.local/delete/1
 
 
@@ -129,6 +134,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "Product B", "pric
 
 
 Create an order:
+
 curl -X POST -H "Content-Type: application/json" -d '{
   "products": [
     {"id": "2", "quantity": 2},
